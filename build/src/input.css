@@ -1,0 +1,44 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+.space-grotesk {
+  font-family: "Space Grotesk", sans-serif;
+}
+
+.hero-bg {
+  background-image: url("../src/image/bg.png"); /* Ganti dengan URL gambar Anda */
+  background-size: auto; /* Menutupi seluruh area */
+  background-position: right; /* Posisikan gambar di tengah */
+  background-repeat: no-repeat; /* Mencegah pengulangan gambar */
+  background-position-y: -150px;
+  height: 100vh; /* Sesuaikan tinggi sesuai kebutuhan, di sini diatur ke 100% viewport height */
+  width: 100%; /* Lebar penuh */
+}
+.glow {
+  box-shadow: 0 0 15px 5px rgba(255, 215, 0, 0.7),
+    0 0 30px 15px rgba(255, 165, 0, 0.5), 0 0 45px 25px rgba(255, 69, 0, 0.3);
+}
+
+.blockquote-with-background {
+  background-image: url("../src/image/Group\ 4.png"); /* Sesuaikan path gambar */
+  background-size: 100%; /* Mengatur gambar agar menutupi seluruh area blockquote */
+  background-position: center; /* Gambar berada di tengah */
+  background-repeat: no-repeat; /* Hindari pengulangan gambar */
+}
+
+@media (max-width: 884px) {
+  .hero-bg {
+    background-size: contain; /* Pada layar kecil, gambar akan menyesuaikan kontainer */
+    background-position: right; /* Memposisikan gambar di bagian atas */
+    height: auto; /* Biarkan tinggi elemen sesuai dengan konten */
+    background-position-y: -200px;
+  }
+}
+@media (max-width: 360px) {
+  .hero-bg {
+    background-size: contain; /* Pada layar kecil, gambar akan menyesuaikan kontainer */
+    background-position: top; /* Memposisikan gambar di bagian atas */
+    height: auto;
+    background-position-y: -150px;
+  }
+}
